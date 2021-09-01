@@ -8,11 +8,11 @@ function generatePhoneNumber(numberPhone) {
   let numberMask = '';
   let aux = [];
   if (numberPhone.length !== 11) {
-    return "Array com tamanho incorreto."
+    return 'Array com tamanho incorreto.'
   }
   for (let i = 0; i < numberPhone.length; i += 1) {
     if ((numberPhone[i] < 0 || numberPhone[i] > 9)) {
-      return "não é possível gerar um número de telefone com esses valores"
+      return 'não é possível gerar um número de telefone com esses valores'
     }
     for (let j = 0; j < numberPhone.length; j += 1) {
       if (numberPhone[i] === numberPhone[j]) {
@@ -36,7 +36,7 @@ function generatePhoneNumber(numberPhone) {
       if (aux[i] === numberPhone[j]) {
         coutFinal += 1;
         if (coutFinal >= 3) {
-          return "não é possível gerar um número de telefone com esses valores";
+          return 'não é possível gerar um número de telefone com esses valores';
         }
       }
     }
